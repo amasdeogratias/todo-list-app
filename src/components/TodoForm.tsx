@@ -1,9 +1,18 @@
 import React, { useState } from 'react'
-
-const TodoForm = () => {
+interface TodoFormProps {
+    addTodo: (newTodo: string) => void;
+}
+const TodoForm: React.FC<TodoFormProps> = ({ addTodo }) => {
     const [newTodo, setNewTodo] = useState<string>("")
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        if (newTodo !== "") {
+            addTodo(newTodo);
+            setNewTodo("");
+        }
+    }
   return (
-    <form className='flex gap-2'>
+    <form className='flex gap-2' onSubmit={handleSubmit}>
         <input 
             type="text" 
             name="todo" 

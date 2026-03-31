@@ -17,6 +17,7 @@ const TodoForm: React.FC<TodoFormProps> = ({ addTodo }) => {
             type="text" 
             name="todo" 
             id="todo"
+            value={newTodo}
             className='border border-gray-300 rounded px-2 py-1 flex-1'
             onChange={(e) => setNewTodo(e.target.value)} 
         />

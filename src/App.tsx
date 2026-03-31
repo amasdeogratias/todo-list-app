@@ -16,7 +16,7 @@ function App() {
       <h1 className='text-2xl font-bold mb-4'>Todo App</h1>
       <TodoForm addTodo={addTodo} />
       <div className='mt-4 bg-black rounded-md'>
-        <TodoList todos={todos}  />
+        <TodoList todos={todos} setTodos={setTodos}  />
       </div>
     </div>
   )

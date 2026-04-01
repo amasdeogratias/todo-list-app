@@ -88,7 +88,7 @@ const TodoList = ({ todos, setTodos }: TodoListProps) => {
                   />
                 ) : (
                   <span
-                    className={`ml-3 break-words pr-2 text-base font-medium ${todo.completed ? "text-slate-400 line-through" : "text-slate-800"}`}
+                    className={`ml-3 wrap-break-word pr-2 text-base font-medium ${todo.completed ? "text-slate-400 line-through" : "text-slate-800"}`}
                   >
                     {todo.text}
                   </span>

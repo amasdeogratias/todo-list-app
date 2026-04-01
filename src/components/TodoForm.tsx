@@ -12,16 +12,17 @@ const TodoForm: React.FC<TodoFormProps> = ({ addTodo }) => {
         }
     }
   return (
-    <form className='flex gap-2' onSubmit={handleSubmit}>
+    <form className='flex flex-col gap-3 sm:flex-row' onSubmit={handleSubmit}>
         <input 
             type="text" 
             name="todo" 
             id="todo"
+            placeholder='Add a new task'
             value={newTodo}
-            className='border border-gray-300 rounded px-2 py-1 flex-1'
+            className='flex-1 rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm outline-none transition focus:border-green-500 focus:ring-4 focus:ring-green-100'
             onChange={(e) => setNewTodo(e.target.value)} 
         />
-        <button type="submit" className='bg-green-500 text-white rounded px-4 py-2 cursor-pointer'>Add Todo</button>
+        <button type="submit" className='cursor-pointer rounded-xl bg-green-600 px-5 py-3 font-medium text-white transition hover:bg-green-700'>Add Todo</button>
     </form>
   )
 }
